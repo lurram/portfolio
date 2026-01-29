@@ -1,7 +1,7 @@
 
 import { SiMongodb, SiMysql, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
-import { Project, Skill } from '../types';
+import { Project, Skill } from './components/types';
 
 
 

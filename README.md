@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+<h1 align="center"> Portfolio </h1>
 
-# Run and deploy your AI Studio app
+<p align="center">
+Website, desenvolvido por Lurram Santos. <br/>
+</p>
 
-This contains everything you need to run your app locally.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-janelas">Janelas</a>
+</p>
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+<br>
 
-## Run Locally
+## 🚀 Tecnologias e Bibliotecas
 
-**Prerequisites:**  Node.js
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- React
+- Vite
+- Git e Github
+- Typescript
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Esse projeto foi desenvolvido com as seguintes bibliotecas:
+
+- Tailwindcss
+
+## 💻 Projeto
+
+Este website de portfolio é para mostrar mais os meus projetos e como me contatar
+
+- [Acesse o projeto finalizado, online]()
+
+## 🔖 Janelas
