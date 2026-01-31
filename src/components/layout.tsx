@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { PERSONAL_INFO } from '../constants';
-
+import { IoClose, IoMenu } from "react-icons/io5";
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -19,12 +20,29 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Função para lidar com o clique em links de hash para garantir o scroll suave
+  // Fecha o menu móvel quando a rota muda
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
+  // Previne o scroll do body quando o menu está aberto
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMobileMenuOpen]);
+
   const handleNavClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMobileMenuOpen(false);
   };
 
   const navLinks = [
@@ -80,9 +98,77 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </a>
           </nav>
 
-          <button className="md:hidden text-[#0d5973] dark:text-white">
-            <span className="material-symbols-outlined text-3xl">menu</span>
+         {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-[#0d5973] dark:text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+          >
+            {isMobileMenuOpen ? (
+              <IoClose className="text-3xl" />
+            ) : (
+              <IoMenu className="text-3xl" />
+            )}
           </button>
+        </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div 
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
+
+        {/* Mobile Menu Panel */}
+        <div className={`
+          fixed top-0 right-0 h-full w-64 bg-white dark:bg-[#111d21] 
+          shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden
+          ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+        `}>
+          <div className="h-24 flex items-center justify-end px-6 border-b border-slate-200 dark:border-slate-800">
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-slate-500 hover:text-[#0d5973] dark:text-slate-400 dark:hover:text-white"
+              aria-label="Fechar menu"
+            >
+              <IoClose className="text-2xl" />
+            </button>
+          </div>
+
+          <nav className="flex flex-col p-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.path}
+                href={`#${link.path}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.path);
+                }}
+                className={`
+                  py-4 px-2 text-lg font-semibold border-b border-slate-100 dark:border-slate-800
+                  transition-all hover:text-[#0d5973] dark:hover:text-white
+                  ${location.hash === `#${link.path}` 
+                    ? 'text-[#0d5973] dark:text-white' 
+                    : 'text-slate-600 dark:text-slate-400'
+                  }
+                `}
+              >
+                {link.name}
+              </a>
+            ))}
+            
+            <a 
+              href="#contact" 
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('contact');
+              }}
+              className="mt-6 px-5 py-3 bg-[#0d5973] text-white rounded-lg text-lg font-bold hover:brightness-110 transition-all text-center shadow-lg shadow-[#0d5973]/20"
+            >
+              Contato
+            </a>
+          </nav>
         </div>
       </header>
 

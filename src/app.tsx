@@ -185,11 +185,11 @@ const App: React.FC = () => {
                 <h2 className="text-4xl md:text-6xl font-extrabold tracking-tighter leading-tight">
                   Impulsione sua ideia <br className="hidden md:block" /> com tecnologia de ponta.
                 </h2>
-                <p className="text-white/80 text-lg">
+                <p className="text-white/80 text-lg p-4 md:p-0">
                   Seja para um app mobile disruptivo ou uma plataforma web escalável, estou pronto para transformar seu desafio em realidade.
                 </p>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                  <a href={`mailto:${PERSONAL_INFO.email}`} className="bg-white text-[#0d5973] px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-transform active:scale-95 shadow-2xl flex items-center gap-3">
+                  <a href={`mailto:${PERSONAL_INFO.email}`} className="bg-white text-[#0d5973] px-3 md:px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-transform active:scale-95 shadow-2xl flex items-center gap-3">
                     <BiMailSend className="material-symbols-outlined"/>
                     {PERSONAL_INFO.email}
                   </a>
