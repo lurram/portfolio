@@ -39,18 +39,18 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "2",
-    title: "EcoTrack App",
-    description: "Aplicativo mobile para monitoramento de pegada de carbono em tempo real com geolocalização e gráficos interativos.",
-    category: "Mobile",
-    tags: ["React Native", "Firebase", "TypeScript"],
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
+    title: "Barbershop",
+    description: "Website com intuito de organizar e gerenciar o atendimento de barbearias cadastradas no banco de dados.",
+    category: "FullStack Web",
+    tags: ["Next.js", "PostgreSQL", "TypeScript", "Tailwindcss", ],
+    image: "/project-2.png"
   },
   {
     id: "3",
-    title: "SaaS de Logística",
-    description: "Plataforma web para gestão de frotas e entregas. Arquitetura robusta preparada para milhares de requisições simultâneas.",
+    title: "Website EST Informática",
+    description: "Website informativo da empresa EST Informática.",
     category: "Fullstack Web",
-    tags: ["Next.js", "Node.js", "Docker"],
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop"
+    tags: ["Vite", "Tailwindcss"],
+    image: "/project-3.png"
   }
 ];
