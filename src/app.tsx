@@ -148,9 +148,12 @@ const App: React.FC = () => {
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="px-6 py-3 bg-white text-black font-bold rounded-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex items-center gap-2">
-                      Ver Detalhes <span className="material-symbols-outlined text-sm"><RxOpenInNewWindow /></span>
-                    </span>
+                    <a href={project.link} className="px-6 py-3 bg-white text-black font-bold rounded-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex items-center gap-2">
+                      Ver Detalhes 
+                      <span>
+                        <RxOpenInNewWindow className="material-symbols-outlined text-sm" />
+                      </span>
+                    </a>
                   </div>
                 </div>
                 <div className="space-y-3 px-2">

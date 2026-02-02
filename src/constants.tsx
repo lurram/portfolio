@@ -35,7 +35,8 @@ export const PROJECTS: Project[] = [
     description: "Sistema de gerenciamento de passageiros e cargas para embarcações com App Mobile (React Native).",
     category: "Mobile",
     tags: ["React Native"],
-    image: "/project-1.png"
+    image: "/project-1.png",
+    link: 'https://github.com/lurram/embarque-certo'
   },
   {
     id: "2",
@@ -43,7 +44,8 @@ export const PROJECTS: Project[] = [
     description: "Website com intuito de organizar e gerenciar o atendimento de barbearias cadastradas no banco de dados.",
     category: "FullStack Web",
     tags: ["Next.js", "PostgreSQL", "TypeScript", "Tailwindcss", ],
-    image: "/project-2.png"
+    image: "/project-2.png",
+    link: 'https://github.com/lurram/barbershop'
   },
   {
     id: "3",
@@ -51,6 +53,7 @@ export const PROJECTS: Project[] = [
     description: "Website informativo da empresa EST Informática.",
     category: "Fullstack Web",
     tags: ["Vite", "Tailwindcss"],
-    image: "/project-3.png"
+    image: "/project-3.png",
+    link: 'https://github.com/lurram/est-informatica'
   }
 ];
