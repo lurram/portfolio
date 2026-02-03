@@ -7,8 +7,10 @@ import { PERSONAL_INFO, PROJECTS, SKILLS } from './constants';
 
 import { SiStackbit } from 'react-icons/si';
 import { CgSmartphone } from 'react-icons/cg';
-import { BiMailSend } from 'react-icons/bi';
 import { RxLayers, RxOpenInNewWindow } from 'react-icons/rx';
+import WhatsAppSender from './components/send-mensage';
+import { IoCopyOutline } from 'react-icons/io5';
+import CopyButton from './components/copy-email';
 
 const App: React.FC = () => {
   return (
@@ -38,7 +40,12 @@ const App: React.FC = () => {
               <a href="#projects" className="flex items-center gap-2 px-8 py-4 bg-[#0d5973] text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1">
                 Explorar Projetos
               </a>
-              <a href="#contact" className="flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+
+              <a href="/curriculo.pdf" className="flex items-center gap-2 px-8 py-4 bg-white text-[#0d5973] rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1">
+                Currículo
+              </a>
+
+              <a href="#contact" className="flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1">
                 Entrar em Contato
               </a>
             </div>
@@ -104,7 +111,6 @@ const App: React.FC = () => {
             </ScrollReveal>
 
            {SKILLS.map((skill, index) => {
-            // Componente de ícone extraído
             const Icon = skill.icon;
             
             return (
@@ -191,11 +197,9 @@ const App: React.FC = () => {
                 <p className="text-white/80 text-lg p-4 md:p-0">
                   Seja para um app mobile disruptivo ou uma plataforma web escalável, estou pronto para transformar seu desafio em realidade.
                 </p>
-                <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                  <a href={`mailto:${PERSONAL_INFO.email}`} className="bg-white text-[#0d5973] px-3 md:px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-transform active:scale-95 shadow-2xl flex items-center gap-3">
-                    <BiMailSend className="material-symbols-outlined"/>
-                    {PERSONAL_INFO.email}
-                  </a>
+                <div className="flex flex-col justify-center lg:justify-start gap-4 w-md">
+                  <CopyButton textToCopy={PERSONAL_INFO.email} />
+                  <WhatsAppSender defaultMessage="Olá! Gostaria de mais informações." />
                 </div>
               </div>
               

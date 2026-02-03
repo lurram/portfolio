@@ -13,7 +13,8 @@ export const PERSONAL_INFO = {
   bio: "Crio soluções escaláveis e interfaces intuitivas, unindo boas práticas de engenharia e foco na experiência do usuário para transformar ideias em produtos funcionais.",
   location: "Brasil",
   email: "lurram.santos.dev@gmail.com",
-  photoUrl: "../public/personal.jpg" 
+  photoUrl: "../public/personal.jpg",
+  phone: "+55 96 991779011"
 };
 
 export const SKILLS: Skill[] = [
