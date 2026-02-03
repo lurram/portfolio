@@ -1,9 +1,15 @@
-
-import { SiMongodb, SiMysql, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si';
-import { TbBrandReactNative } from 'react-icons/tb';
-import { Project, Skill } from './components/types';
-
-
+import {
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+import type { Project, Skill } from "./components/types";
 
 export const PERSONAL_INFO = {
   name: "Lurram Barbosa Santos",
@@ -14,18 +20,43 @@ export const PERSONAL_INFO = {
   location: "Brasil",
   email: "lurram.santos.dev@gmail.com",
   photoUrl: "../public/personal.jpg",
-  phone: "+55 96 991779011"
+  phone: "+55 96 991779011",
 };
 
 export const SKILLS: Skill[] = [
-  { name: "React", icon: SiReact, featured: true, description: "Interfaces web modernas e reativas." },
-  { name: "React Native", icon: TbBrandReactNative, featured: true, description: "Apps nativos de alto desempenho para iOS e Android." },
-  { name: "Node.js", icon: SiNodedotjs, featured: true, description: "Backend escalável e arquitetura de microserviços." },
-  { name: "Next.js", icon: SiNextdotjs, featured: true, description: "Performance web, SSR e otimização SEO." },
+  {
+    name: "React",
+    icon: SiReact,
+    featured: true,
+    description: "Interfaces web modernas e reativas.",
+  },
+  {
+    name: "React Native",
+    icon: TbBrandReactNative,
+    featured: true,
+    description: "Apps nativos de alto desempenho para iOS e Android.",
+  },
+  {
+    name: "Node.js",
+    icon: SiNodedotjs,
+    featured: true,
+    description: "Backend escalável e arquitetura de microserviços.",
+  },
+  {
+    name: "Next.js",
+    icon: SiNextdotjs,
+    featured: true,
+    description: "Performance web, SSR e otimização SEO.",
+  },
   { name: "MongoDB", icon: SiMongodb, featured: false },
   { name: "MySQL", icon: SiMysql, featured: false },
   { name: "PostgreSQL", icon: SiPostgresql, featured: false },
-  { name: "TypeScript", icon: SiTypescript, featured: true, description: "Código tipado, seguro e manutenível." },
+  {
+    name: "TypeScript",
+    icon: SiTypescript,
+    featured: true,
+    description: "Código tipado, seguro e manutenível.",
+  },
   { name: "Tailwindcss", icon: SiTailwindcss, featured: false },
 ];
 
@@ -33,20 +64,22 @@ export const PROJECTS: Project[] = [
   {
     id: "1",
     title: "Embarque Certo",
-    description: "Sistema de gerenciamento de passageiros e cargas para embarcações com App Mobile (React Native).",
+    description:
+      "Sistema de gerenciamento de passageiros e cargas para embarcações com App Mobile (React Native).",
     category: "Mobile",
     tags: ["React Native"],
     image: "/project-1.png",
-    link: 'https://github.com/lurram/embarque-certo'
+    link: "https://github.com/lurram/embarque-certo",
   },
   {
     id: "2",
     title: "Barbershop",
-    description: "Website com intuito de organizar e gerenciar o atendimento de barbearias cadastradas no banco de dados.",
+    description:
+      "Website com intuito de organizar e gerenciar o atendimento de barbearias cadastradas no banco de dados.",
     category: "FullStack Web",
-    tags: ["Next.js", "PostgreSQL", "TypeScript", "Tailwindcss", ],
+    tags: ["Next.js", "PostgreSQL", "TypeScript", "Tailwindcss"],
     image: "/project-2.png",
-    link: 'https://github.com/lurram/barbershop'
+    link: "https://github.com/lurram/barbershop",
   },
   {
     id: "3",
@@ -55,6 +88,6 @@ export const PROJECTS: Project[] = [
     category: "Fullstack Web",
     tags: ["Vite", "Tailwindcss"],
     image: "/project-3.png",
-    link: 'https://github.com/lurram/est-informatica'
-  }
+    link: "https://github.com/lurram/est-informatica",
+  },
 ];
