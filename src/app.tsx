@@ -38,24 +38,24 @@ const App: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4 md:w-full">
               <a
                 href="#projects"
-                className="flex items-center gap-2 px-8 py-4 bg-[#0d5973] text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1"
+                className="flex items-center justify-center gap-2 w-full sm:w-56 py-4 bg-[#0d5973] text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1"
               >
                 Explorar Projetos
               </a>
 
               <a
                 href="/curriculo.pdf"
-                className="flex items-center gap-2 px-8 py-4 bg-white text-[#0d5973] rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1"
+                className="flex items-center justify-center gap-2 w-full sm:w-56 py-4 bg-[#154158] text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1"
               >
                 Currículo
               </a>
 
               <a
                 href="#contact"
-                className="flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1"
+                className="flex items-center justify-center gap-2 w-full sm:w-56 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1"
               >
                 Entrar em Contato
               </a>
