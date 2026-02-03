@@ -188,7 +188,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </span>
             </div>
             <p className="text-sm text-slate-500">
-              © 2024 • Engenheiro de Computação
+              © 2026 • Engenheiro de Computação
             </p>
           </div>
 
