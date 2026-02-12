@@ -21,12 +21,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Fecha o menu móvel quando a rota muda
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  // Previne o scroll do body quando o menu está aberto
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -208,6 +206,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               className="text-slate-400 hover:text-[#0d5973] transition-colors font-bold text-sm"
             >
               GitHub
+            </a>
+            <a
+              href="https://instagram.com/lurram.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-[#0d5973] transition-colors font-bold text-sm"
+            >
+              Instagram
             </a>
           </div>
         </div>

@@ -84,7 +84,7 @@ const App: React.FC = () => {
           >
             <div className="aspect-4/5 rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-2xl relative z-10">
               <img
-                src="/personal.jpg"
+                src="/personal.png"
                 alt={PERSONAL_INFO.name}
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
               />
