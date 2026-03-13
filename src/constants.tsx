@@ -90,4 +90,23 @@ export const PROJECTS: Project[] = [
     image: "/project-3.png",
     link: "https://github.com/lurram/est-informatica",
   },
+  {
+    id: "4",
+    title: "Micro Saas - Doutor Agenda",
+    description:
+      "Doutor Agenda é uma plataforma moderna e robusta para gestão de clínicas médicas, permitindo o agendamento de consultas, gestão de pacientes e controle financeiro de forma intuitiva e eficiente.",
+    category: "Fullstack Web",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwindcss",
+      "Node.js",
+      "PostgreSQL",
+      "Drizzle",
+      "Stripe",
+      "Better-Auth",
+    ],
+    image: "/project-4.png",
+    link: "https://github.com/lurram/doutor-agenda",
+  },
 ];

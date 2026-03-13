@@ -47,7 +47,7 @@ const App: React.FC = () => {
               </a>
 
               <a
-                href="/curriculo.pdf"
+                href="/Curriculo - Lurram Barbosa Santos.pdf"
                 className="flex items-center justify-center gap-2 w-full sm:w-56 py-4 bg-[#154158] text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1"
               >
                 Currículo
