@@ -207,14 +207,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             >
               GitHub
             </a>
-            <a
-              href="https://instagram.com/lurram.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-400 hover:text-[#0d5973] transition-colors font-bold text-sm"
-            >
-              Instagram
-            </a>
           </div>
         </div>
       </footer>
