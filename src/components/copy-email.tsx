@@ -28,6 +28,7 @@ const CopyButton = ({ textToCopy }: { textToCopy: string }) => {
 
   return (
     <button
+      type="button"
       onClick={handleCopy}
       disabled={status === "copying"}
       className={`

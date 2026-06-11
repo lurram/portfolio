@@ -5,7 +5,7 @@ import { SiStackbit } from "react-icons/si";
 import Layout from "../src/components/layout";
 import CopyButton from "./components/copy-email";
 import ScrollReveal from "./components/scrollReveal";
-import WhatsAppSender from "./components/send-mensage";
+import WhatsAppSender from "./components/send-message";
 import { PERSONAL_INFO, PROJECTS, SKILLS } from "./constants";
 
 const App: React.FC = () => {
@@ -48,7 +48,9 @@ const App: React.FC = () => {
 
               <a
                 href="/Curriculo - Lurram Barbosa Santos.pdf"
+                target="_blank"
                 className="flex items-center justify-center gap-2 w-full sm:w-56 py-4 bg-[#154158] text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-[#0d5973]/40 transition-all hover:-translate-y-1"
+                rel="noopener"
               >
                 Currículo
               </a>
